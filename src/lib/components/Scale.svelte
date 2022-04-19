@@ -1,16 +1,16 @@
 <script>
-	import { formatThousands } from '$lib/utils/formatNumbers';
+	import { formatInt } from '$lib/utils/formatNumbers';
 
 	let width;
 
 	export let classes;
 	export let clusters;
 	clusters.unshift(0);
-	// console.log(clusters);
+	console.log(clusters);
 
 	function displayDigit(index, number) {
 		if (index == 0 || index == 4) {
-			return formatThousands(number);
+			return formatInt(number * 100);
 		} else {
 			return '';
 		}

@@ -1,6 +1,6 @@
 # ToDos
 
-1. CSV map
+- CSV map correct scale values
 
 --
 

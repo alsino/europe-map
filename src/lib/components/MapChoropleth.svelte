@@ -90,6 +90,7 @@
 
 				// Set color scale domain and range
 				colorScale.domain(extent(extentArray)).range(schemeBlues[5]);
+				clusters = colorScale.quantiles();
 			})
 			.catch((error) => console.error('error', error));
 	}
@@ -198,7 +199,7 @@
 
 {#if $dataReady}
 	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
-		<!-- <Scale classes={schemeBlues[5]} {clusters} /> -->
+		<Scale classes={schemeBlues[5]} {clusters} />
 		<Legend {legend} />
 
 		<svg preserveAspectRatio="xMinYMid meet" class="" viewbox="0 0 {width} {height}">
