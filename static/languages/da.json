@@ -1,8 +1,7 @@
 {
     "heading": "Militærudgifter op i alle EU-lande",
-    "subheading": "Offentlige udgifter til militært forsvar som en procentdel af BNP i lande i Den Europæiske Union i 2020",
-    "legend1": "Schengen-lande",
-    "legend2": "Ikke-Schengen-lande",
+    "subheading": "Offentlige udgifter til militært forsvar i procent af BNP i lande i Den Europæiske Union i 2020",
+    "legend1": "Ikke-EU lande",
     "tooltip1": "% af BNP",
     "tooltip2": "",
     "textSourceDescription": "Kilde",

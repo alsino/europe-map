@@ -1,8 +1,7 @@
 {
     "heading": "Emelkednek a katonai kiadások az összes uniós országban",
     "subheading": "Az államháztartás katonai védelemre fordított kiadásai a GDP százalékában az Európai Unió országaiban 2020-ban",
-    "legend1": "schengeni országok",
-    "legend2": "Nem schengeni országok",
+    "legend1": "EU-n kívüli országok",
     "tooltip1": "a GDP %-a",
     "tooltip2": "",
     "textSourceDescription": "Forrás",

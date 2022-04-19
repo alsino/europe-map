@@ -41,7 +41,6 @@
 
 	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
 
-	// let dataReady = false;
 	let tooltipAvailable = true; // Set this to switch on/ff global tooltip
 	let tooltipVisible = false;
 	let tooltipHeight;
@@ -49,11 +48,7 @@
 
 	let graticules;
 	let countriesAll;
-	let ukraine;
-
 	let hoveredCountry;
-
-	let totalRefugees;
 
 	const projection = geoIdentity().reflectY(true);
 	const path = geoPath().projection(projection);
@@ -110,9 +105,6 @@
 			item.value = csvTransformed[item.properties.id];
 		});
 
-		// console.log('csvTransformed', csvTransformed);
-		console.log('countriesAll', countriesAll);
-
 		$dataReady = true;
 	}
 
@@ -131,6 +123,14 @@
 			} else {
 				return '#F4F4F4';
 			}
+		}
+	}
+
+	function getStroke(feature) {
+		if (feature.value) {
+			return 'white';
+		} else {
+			return '#cdcdcd';
 		}
 	}
 
@@ -198,8 +198,8 @@
 
 {#if $dataReady}
 	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
-		<!-- <Scale classes={schemeBlues[5]} {clusters} />
-		<Legend {legend} /> -->
+		<!-- <Scale classes={schemeBlues[5]} {clusters} /> -->
+		<Legend {legend} />
 
 		<svg preserveAspectRatio="xMinYMid meet" class="" viewbox="0 0 {width} {height}">
 			<!-- graticules (lines) -->
@@ -211,7 +211,7 @@
 			{#each countriesAll.features as feature, index}
 				<path
 					d={path(feature)}
-					stroke="white"
+					stroke={getStroke(feature)}
 					fill={getFill(feature)}
 					class={getClass(feature)}
 					on:mouseenter={() => handleMouseEnter(feature)}

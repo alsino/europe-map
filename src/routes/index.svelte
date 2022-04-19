@@ -19,9 +19,6 @@
 	let textNoteDescription;
 	let textNote;
 
-	let lastUpdate;
-	let totalRefugees;
-
 	// Send map height to parent window
 	$: {
 		if ($APP_HEIGHT) {
@@ -33,7 +30,6 @@
 
 	onMount(async () => {
 		await getLanguage($selectedLanguage.value);
-		await getAggregateAPI();
 	});
 
 	async function getLanguage(lang) {
@@ -55,41 +51,13 @@
 			});
 	}
 
-	$: legend = [
-		{ label: legendLabel1, color: '#cad1d9' },
-		{ label: legendLabel2, color: '#f4f4f4' }
-	];
-
+	$: legend = [{ label: legendLabel1, color: '#f4f4f4' }];
 	$: tooltip = { label1: tooltipLabel1, label2: tooltipLabel2 };
 
 	function handleSelect(event) {
 		$selectedLanguage = { value: event.detail.value, label: event.detail.label };
 		// $selectedLanguage = event.detail.value;
 		getLanguage($selectedLanguage.value);
-	}
-
-	async function getAggregateAPI() {
-		let aggregateData =
-			'https://data2.unhcr.org/population/?widget_id=294522&sv_id=54&population_group=5460';
-
-		// Load aggregate data
-		const resAggregate = await fetch(aggregateData)
-			.then((response) => response.json())
-			.then((dataRaw) => {
-				let data = dataRaw.data;
-				// console.log(data);
-
-				// Force strings to numbers
-				data.forEach(function (d) {
-					d['individuals'] = +d['individuals'];
-				});
-
-				data = data[0];
-
-				lastUpdate = data.date;
-				totalRefugees = data.individuals;
-			})
-			.catch((error) => console.error('error', error));
 	}
 </script>
 
@@ -124,7 +92,7 @@
 			<MapChoropleth {legend} {tooltip} />
 		</div>
 	</div>
-	{#if textSourceDescription && textSource && textDataAccess && lastUpdate}
+	{#if textSourceDescription && textSource && textDataAccess}
 		<div class="text-xs mt-2">
 			<div>
 				<span class="font-bold">{textSourceDescription}:</span>

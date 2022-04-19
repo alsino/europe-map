@@ -1,8 +1,7 @@
 {
     "heading": "Les dépenses militaires augmentent dans tous les pays de l'UE",
     "subheading": "Dépenses publiques de défense militaire en pourcentage du PIB dans les pays de l'Union européenne en 2020",
-    "legend1": "Pays Schengen",
-    "legend2": "Pays hors Schengen",
+    "legend1": "Pays hors UE",
     "tooltip1": "% du PIB",
     "tooltip2": "",
     "textSourceDescription": "La source",
@@ -10,5 +9,5 @@
     "textNoteDescription": "Noter",
     "textNote": "Dépenses publiques par COFOG (Classification UNSD des fonctions du gouvernement, reproduite dans le SEC 2010) fonction et type.",
     "textDataAccess": "Accéder aux données",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fr"
 }
