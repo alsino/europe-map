@@ -16,14 +16,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.14.0'
-       - name: Get data
-         run: |
+      - name: Get data
+        run: |
           npm install
           npm run test
-       - name: Commit report
-          run: |
-            git config --global user.name 'alsino'
-            git config --global user.email 'iamahorse@gmail.com'
-            git add test.json
-            git commit -m "Added test.json"
-            git push
+      - name: Commit report
+        run: |
+          git config --global user.name 'alsino'
+          git config --global user.email 'iamahorse@gmail.com'
+          git add test.json
+          git commit -m "Added test.json"
+          git push
