@@ -1,14 +1,14 @@
 {
-    "heading": "Meer dan 4,9 miljoen vluchtelingen zijn al gevlucht uit Oekraïne",
-    "subheading": "Deze kaart wordt dagelijks bijgewerkt met de laatste gegevens van UNHCR over vluchtelingen die sinds 24 februari 2022 vanuit Oekraïne naar buurlanden zijn gevlucht",
+    "heading": "Militaire uitgaven stijgen in alle EU-landen",
+    "subheading": "Algemene overheidsuitgaven voor militaire defensie als percentage van het BBP in landen van de Europese Unie in 2020",
     "legend1": "Schengenlanden",
     "legend2": "Niet-Schengenlanden",
-    "tooltip1": "vluchtelingen",
-    "tooltip2": "Aandeel van alle vluchtelingen",
-    "textUpdate": "Laatst bijgewerkt",
+    "tooltip1": "% van het BBP",
+    "tooltip2": "",
     "textSourceDescription": "Bron",
-    "textSource": "Hoge Commissaris voor de Vluchtelingen van de Verenigde Naties (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Opmerking",
-    "textNote": "Het recht om vrij te bewegen binnen het Schengengebied betekent dat er zeer weinig grenscontroles zijn binnen de Europese Unie. De gegevens van aankomsten in Schengenlanden (Hongarije, Polen, Slowakije) grenzend aan Oekraïne vertegenwoordigen daarom alleen grensoverschrijdingen naar dat land, maar UNHCR schat dat een groot aantal mensen is doorgereisd naar andere landen.",
-    "textDataAccess": "Toegang tot de gegevens"
+    "textNote": "Overheidsuitgaven volgens COFOG (UNSD-classificatie van overheidsfuncties, gerepliceerd in ESR2010) functie en type.",
+    "textDataAccess": "Toegang tot de gegevens",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

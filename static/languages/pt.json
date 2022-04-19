@@ -1,14 +1,14 @@
 {
-    "heading": "Mais de 4,9 milhões de refugiados já fugiram da Ucrânia",
-    "subheading": "Este mapa é atualizado diariamente com os dados mais recentes do ACNUR sobre refugiados que fogem da Ucrânia para países vizinhos desde 24 de fevereiro de 2022",
+    "heading": "Gastos militares aumentam em todos os países da UE",
+    "subheading": "Despesas do governo geral em defesa militar como porcentagem do PIB nos países da União Europeia em 2020",
     "legend1": "Países Schengen",
     "legend2": "Países não Schengen",
-    "tooltip1": "refugiados",
-    "tooltip2": "Parcela de todos os refugiados",
-    "textUpdate": "Ultima atualização",
+    "tooltip1": "% do PIB",
+    "tooltip2": "",
     "textSourceDescription": "Fonte",
-    "textSource": "Alto Comissariado das Nações Unidas para os Refugiados (ACNUR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Observação",
-    "textNote": "O direito de circular livremente no espaço Schengen significa que existem muito poucos controlos fronteiriços na União Europeia. Os dados de chegadas aos países Schengen (Hungria, Polónia, Eslováquia) que fazem fronteira com a Ucrânia, portanto, representam apenas passagens de fronteira para aquele país, mas o ACNUR estima que um grande número de pessoas se mudou para outros países.",
-    "textDataAccess": "Acesse os dados"
+    "textNote": "Despesas governamentais por COFOG (classificação UNSD das funções do governo, replicada no SEC2010) função e tipo.",
+    "textDataAccess": "Acesse os dados",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

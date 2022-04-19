@@ -1,14 +1,14 @@
 {
-    "heading": "Više od 4,9 milijuna izbjeglica već je pobjeglo iz Ukrajine",
-    "subheading": "Ova se karta svakodnevno ažurira najnovijim podacima UNHCR-a o izbjeglicama koje bježe iz Ukrajine u susjedne zemlje od 24. veljače 2022.",
+    "heading": "Vojna potrošnja u svim zemljama EU-a",
+    "subheading": "Rashodi opće države za vojnu obranu kao postotak BDP-a u zemljama Europske unije u 2020.",
     "legend1": "schengenske zemlje",
     "legend2": "Zemlje koje nisu članice Schengena",
-    "tooltip1": "izbjeglice",
-    "tooltip2": "Udio svih izbjeglica",
-    "textUpdate": "Posljednje ažurirano",
+    "tooltip1": "% BDP-a",
+    "tooltip2": "",
     "textSourceDescription": "Izvor",
-    "textSource": "Visoki povjerenik Ujedinjenih naroda za izbjeglice (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Bilješka",
-    "textNote": "Pravo na slobodno kretanje unutar schengenskog prostora znači da postoji vrlo malo graničnih kontrola unutar Europske unije. Podaci o dolascima u zemlje Schengena (Mađarska, Poljska, Slovačka) koje graniče s Ukrajinom dakle predstavljaju samo granične prijelaze u tu zemlju, no UNHCR procjenjuje da je velik broj ljudi odselio u druge zemlje.",
-    "textDataAccess": "Pristup podacima"
+    "textNote": "Državni rashodi prema funkciji i vrsti COFOG (UNSD klasifikacija funkcija vlade, replicirana u ESA2010).",
+    "textDataAccess": "Pristup podacima",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=hr"
 }

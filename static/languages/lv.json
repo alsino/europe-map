@@ -1,14 +1,14 @@
 {
-    "heading": "No Ukrainas jau devušies vairāk nekā 4,9 miljoni bēgļu",
-    "subheading": "Šī karte katru dienu tiek atjaunināta ar jaunākajiem UNHCR datiem par bēgļiem, kas bēg no Ukrainas uz kaimiņvalstīm kopš 2022. gada 24. februāra.",
+    "heading": "Militārie izdevumi visās ES valstīs",
+    "subheading": "Vispārējie valdības izdevumi militārajai aizsardzībai procentos no IKP Eiropas Savienības valstīs 2020. gadā",
     "legend1": "Šengenas valstis",
     "legend2": "Valstis, kas nav Šengenas zonas valstis",
-    "tooltip1": "bēgļi",
-    "tooltip2": "Visu bēgļu daļa",
-    "textUpdate": "Pēdējoreiz atjaunots",
+    "tooltip1": "% no IKP",
+    "tooltip2": "",
     "textSourceDescription": "Avots",
-    "textSource": "Apvienoto Nāciju Organizācijas Augstais komisārs bēgļu jautājumos (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Piezīme",
-    "textNote": "Tiesības brīvi pārvietoties Šengenas zonā nozīmē, ka Eiropas Savienībā ir ļoti maz robežkontroles. Tāpēc dati par ieceļotājiem Šengenas valstīs (Ungārija, Polija, Slovākija), kas robežojas ar Ukrainu, atspoguļo tikai robežas šķērsošanu šajā valstī, bet UNHCR lēš, ka liels skaits cilvēku ir pārcēlušies uz citām valstīm.",
-    "textDataAccess": "Piekļūstiet datiem"
+    "textNote": "Valdības izdevumi pēc COFOG (UNSD valdības funkciju klasifikācija, replicēta EKS2010) funkcijas un veida.",
+    "textDataAccess": "Piekļūstiet datiem",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

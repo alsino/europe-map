@@ -1,14 +1,14 @@
 {
-    "heading": "Iz Ukrajine je že pobegnilo več kot 4,9 milijona beguncev",
-    "subheading": "Ta zemljevid se dnevno posodablja z najnovejšimi podatki UNHCR o beguncih, ki bežijo iz Ukrajine v sosednje države od 24. februarja 2022.",
+    "heading": "Vojaški izdatki so se povečali v vseh državah EU",
+    "subheading": "Državni izdatki za vojaško obrambo kot odstotek BDP v državah Evropske unije leta 2020",
     "legend1": "schengenske države",
     "legend2": "Države, ki niso schengenske",
-    "tooltip1": "begunci",
-    "tooltip2": "Delež vseh beguncev",
-    "textUpdate": "Zadnja posodobitev",
+    "tooltip1": "% BDP",
+    "tooltip2": "",
     "textSourceDescription": "Vir",
-    "textSource": "Visoki komisar Združenih narodov za begunce (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Opomba",
-    "textNote": "Pravica do prostega gibanja znotraj schengenskega območja pomeni, da je znotraj Evropske unije zelo malo mejnih kontrol. Podatki o prihodih v schengenske države (Madžarska, Poljska, Slovaška), ki mejijo na Ukrajino, torej predstavljajo le mejne prehode v to državo, vendar UNHCR ocenjuje, da se je veliko ljudi preselilo naprej v druge države.",
-    "textDataAccess": "Dostop do podatkov"
+    "textNote": "Državni izdatki po funkciji in vrsti COFOG (UNSD klasifikacija funkcij vlade, ponovljena v ESR 2010).",
+    "textDataAccess": "Dostop do podatkov",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

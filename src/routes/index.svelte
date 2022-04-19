@@ -1,11 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
-	import { MAP_TYPE } from '$lib/stores/shared';
 	import { APP_HEIGHT } from '$lib/stores/shared';
 	import { selectedLanguage } from '$lib/stores/shared';
 	import { languageNameTranslations } from '$lib/stores/languages';
-	import MapChoroplethAPI from '$lib/components/MapChoroplethAPI.svelte';
 	import MapChoropleth from '$lib/components/MapChoropleth.svelte';
 	import Select from 'svelte-select';
 
@@ -15,10 +12,10 @@
 	let tooltipLabel2;
 	let legendLabel1;
 	let legendLabel2;
-	let textUpdate;
 	let textSourceDescription;
 	let textSource;
 	let textDataAccess;
+	let linkDataAccess;
 	let textNoteDescription;
 	let textNote;
 
@@ -37,7 +34,6 @@
 	onMount(async () => {
 		await getLanguage($selectedLanguage.value);
 		await getAggregateAPI();
-		console.log('basePath', base);
 	});
 
 	async function getLanguage(lang) {
@@ -50,10 +46,10 @@
 				legendLabel2 = data.legend2;
 				tooltipLabel1 = data.tooltip1;
 				tooltipLabel2 = data.tooltip2;
-				textUpdate = data.textUpdate;
 				textSourceDescription = data.textSourceDescription;
 				textSource = data.textSource;
 				textDataAccess = data.textDataAccess;
+				linkDataAccess = data.linkDataAccess;
 				textNoteDescription = data.textNoteDescription;
 				textNote = data.textNote;
 			});
@@ -125,19 +121,11 @@
 		{/if}
 
 		<div id="chart-body" class="mt-4">
-			{#if $MAP_TYPE == 'choropleth-api'}
-				<MapChoroplethAPI {legend} {tooltip} />
-			{:else if $MAP_TYPE == 'choropleth'}
-				<MapChoropleth />
-			{/if}
+			<MapChoropleth {legend} {tooltip} />
 		</div>
 	</div>
-	{#if textUpdate && textSourceDescription && textSource && textDataAccess && lastUpdate}
+	{#if textSourceDescription && textSource && textDataAccess && lastUpdate}
 		<div class="text-xs mt-2">
-			<div>
-				<span class="font-bold">{textUpdate}:</span>
-				{lastUpdate}, 12:00 CET
-			</div>
 			<div>
 				<span class="font-bold">{textSourceDescription}:</span>
 				{textSource}
@@ -146,7 +134,7 @@
 				<span class="font-bold">{textNoteDescription}: </span><span>{textNote}</span>
 			</div>
 			<div class="underline">
-				<a target="_blank" href="https://data2.unhcr.org/en/situations/ukraine">{textDataAccess}</a>
+				<a target="_blank" href={linkDataAccess}>{textDataAccess}</a>
 			</div>
 		</div>
 	{/if}

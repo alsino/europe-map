@@ -1,14 +1,14 @@
 {
-    "heading": "Mehr als 4,9 Millionen Flüchtlinge sind bereits aus der Ukraine geflohen",
-    "subheading": "Diese Karte wird täglich mit den neuesten Daten des UNHCR zu Flüchtlingen aktualisiert, die seit dem 24. Februar 2022 aus der Ukraine in die Nachbarländer fliehen",
+    "heading": "Militärausgaben in allen EU-Ländern gestiegen",
+    "subheading": "Staatliche Verteidigungsausgaben in Prozent des BIP in den Ländern der Europäischen Union im Jahr 2020",
     "legend1": "Schengen-Staaten",
     "legend2": "Nicht-Schengen-Länder",
-    "tooltip1": "Flüchtlinge",
-    "tooltip2": "Anteil an allen Flüchtlingen",
-    "textUpdate": "Letzte Aktualisierung",
+    "tooltip1": "% des BIP",
+    "tooltip2": "",
     "textSourceDescription": "Quelle",
-    "textSource": "Hoher Flüchtlingskommissar der Vereinten Nationen (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Notiz",
-    "textNote": "Das Recht, sich innerhalb des Schengen-Raums frei zu bewegen, bedeutet, dass es nur sehr wenige Grenzkontrollen innerhalb der Europäischen Union gibt. Die Daten der Ankünfte in Schengen-Staaten (Ungarn, Polen, Slowakei), die an die Ukraine grenzen, stellen daher nur Grenzübertritte in dieses Land dar, aber UNHCR schätzt, dass eine große Anzahl von Menschen in andere Länder weitergezogen ist.",
-    "textDataAccess": "Greifen Sie auf die Daten zu"
+    "textNote": "Staatsausgaben nach Funktion und Art der COFOG (UNSD-Klassifikation der Staatsfunktionen, repliziert im ESVG 2010).",
+    "textDataAccess": "Greifen Sie auf die Daten zu",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

@@ -1,14 +1,14 @@
 {
-    "heading": "Már több mint 4,9 millió menekült menekült el Ukrajnából",
-    "subheading": "Ez a térkép naponta frissül az UNHCR legfrissebb adataival az Ukrajnából a szomszédos országokba menekülő menekültekről 2022. február 24. óta.",
+    "heading": "Emelkednek a katonai kiadások az összes uniós országban",
+    "subheading": "Az államháztartás katonai védelemre fordított kiadásai a GDP százalékában az Európai Unió országaiban 2020-ban",
     "legend1": "schengeni országok",
     "legend2": "Nem schengeni országok",
-    "tooltip1": "menekültek",
-    "tooltip2": "Az összes menekült részesedése",
-    "textUpdate": "Utolsó frissítés",
+    "tooltip1": "a GDP %-a",
+    "tooltip2": "",
     "textSourceDescription": "Forrás",
-    "textSource": "ENSZ Menekültügyi Főbiztossága (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "jegyzet",
-    "textNote": "A schengeni övezeten belüli szabad mozgáshoz való jog azt jelenti, hogy nagyon kevés határellenőrzés van az Európai Unión belül. Az Ukrajnával határos schengeni országokba (Magyarország, Lengyelország, Szlovákia) érkezők adatai tehát csak az adott ország határátlépéseit jelentik, de az UNHCR becslése szerint nagy számban költöztek tovább más országokba.",
-    "textDataAccess": "Hozzáférés az adatokhoz"
+    "textNote": "Kormányzati kiadások COFOG (UNSD Classification of Government Functions, replikálva az ESA2010-ben) funkció és típus szerint.",
+    "textDataAccess": "Hozzáférés az adatokhoz",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

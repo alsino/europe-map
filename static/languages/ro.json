@@ -1,14 +1,14 @@
 {
-    "heading": "Peste 4,9 milioane de refugiați au fugit deja din Ucraina",
-    "subheading": "Această hartă este actualizată zilnic cu cele mai recente date de la ICNUR privind refugiații care fug din Ucraina în țările vecine începând cu 24 februarie 2022",
+    "heading": "Cheltuielile militare au crescut în toate țările UE",
+    "subheading": "Cheltuielile publice generale pentru apărarea militară ca procent din PIB în țările Uniunii Europene în 2020",
     "legend1": "Țările Schengen",
     "legend2": "Țările non-Schengen",
-    "tooltip1": "refugiati",
-    "tooltip2": "Ponderea tuturor refugiaților",
-    "textUpdate": "Ultima actualizare",
+    "tooltip1": "% din PIB",
+    "tooltip2": "",
     "textSourceDescription": "Sursă",
-    "textSource": "Înaltul Comisar al Națiunilor Unite pentru Refugiați (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Notă",
-    "textNote": "Dreptul de a circula liber în spațiul Schengen înseamnă că există foarte puține controale la frontieră în cadrul Uniunii Europene. Datele privind sosirile în țările Schengen (Ungaria, Polonia, Slovacia) care se învecinează cu Ucraina reprezintă așadar doar punctele de trecere a frontierei în acea țară, dar ICNUR estimează că un număr mare de persoane s-au mutat mai departe în alte țări.",
-    "textDataAccess": "Accesați datele"
+    "textNote": "Cheltuielile guvernamentale după funcția și tipul COFOG (clasificarea UNSD a funcțiilor guvernamentale, replicată în ESA2010).",
+    "textDataAccess": "Accesați datele",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

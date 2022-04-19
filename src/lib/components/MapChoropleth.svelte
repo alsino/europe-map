@@ -1,38 +1,64 @@
 <script>
 	import { MOUSE } from '$lib/stores/shared';
 	import { onMount } from 'svelte';
+	import { CENTER_ON } from '$lib/stores/shared';
 	import { csvData } from '$lib/stores/shared';
 	import { feature } from 'topojson-client';
 	import { geoPath, geoIdentity } from 'd3-geo';
 	import { dataReady } from '$lib/stores/shared';
-	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
-	import { schemeBlues, schemeReds, interpolateBlues, interpolateReds } from 'd3-scale-chromatic';
+	import { MAP_WIDTH } from '$lib/stores/shared';
+	import { selectedLanguage } from '$lib/stores/shared';
+	import { countryNameTranslations } from '$lib/stores/countries';
+	import Scale from './Scale.svelte';
+	import Legend from './Legend.svelte';
 
 	import { csv } from 'd3-fetch';
 	import { extent } from 'd3-array';
 
-	import { formatPercent } from '$lib/utils/formatNumbers';
+	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
+	import { schemeBlues } from 'd3-scale-chromatic';
+
+	import { formatInt } from '$lib/utils/formatNumbers';
 
 	// Make square dimensions i.e. 600x600 to fill all space
 	let width = 600;
 	let height = 600;
-	let paddingMap = -60;
+	let paddingMap;
+	let center;
+
+	$: countryNames = countryNameTranslations[$selectedLanguage.value];
+
+	export let legend;
+	export let tooltip;
+
+	$: if ($CENTER_ON === 'ukraine') {
+		paddingMap = 150;
+		center = ukraine;
+	} else if ($CENTER_ON === 'europe') {
+		paddingMap = -60;
+		center = countriesAll;
+	}
+
+	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
 
 	// let dataReady = false;
 	let tooltipAvailable = true; // Set this to switch on/ff global tooltip
 	let tooltipVisible = false;
 	let tooltipHeight;
+	let tooltipWidth;
 
-	let countries;
 	let graticules;
-	let bgCountries;
-	let euCountries;
+	let countriesAll;
+	let ukraine;
 
 	let hoveredCountry;
+
+	let totalRefugees;
 
 	const projection = geoIdentity().reflectY(true);
 	const path = geoPath().projection(projection);
 	const colorScale = scaleQuantile();
+	let clusters;
 
 	$: if ($dataReady) {
 		console.log('Country data for map loaded');
@@ -41,7 +67,7 @@
 				[paddingMap, paddingMap],
 				[width - paddingMap, height - paddingMap]
 			],
-			graticules
+			center
 		);
 	}
 
@@ -49,27 +75,9 @@
 		const res = await fetch(`/data/geodata/europe-20m.json`)
 			.then((response) => response.json())
 			.then(function (data) {
-				bgCountries = feature(data, data.objects.cntrg);
-				countries = feature(data, data.objects.nutsrg);
+				countriesAll = feature(data, data.objects.cntrg);
 				graticules = feature(data, data.objects.gra);
-
-				// Extract EU countries
-				let euFiltered = bgCountries.features
-					.filter((item) => {
-						return item.properties.isEuMember;
-					})
-					.sort((a, b) => {
-						return a.properties.na.localeCompare(b.properties.na);
-					});
-
-				euCountries = {
-					type: 'FeatureCollection',
-					features: euFiltered
-				};
-
-				console.log(euCountries);
-			})
-			.catch((error) => console.error('error', error));
+			});
 	}
 
 	async function fetchCSV() {
@@ -87,7 +95,6 @@
 
 				// Set color scale domain and range
 				colorScale.domain(extent(extentArray)).range(schemeBlues[5]);
-				// console.log('csv data', data);
 			})
 			.catch((error) => console.error('error', error));
 	}
@@ -99,13 +106,12 @@
 			{}
 		);
 		// Add values from csv
-		countries.features.map((item) => {
+		countriesAll.features.map((item) => {
 			item.value = csvTransformed[item.properties.id];
 		});
 
-		euCountries.features.map((item) => {
-			item.value = csvTransformed[item.properties.id];
-		});
+		// console.log('csvTransformed', csvTransformed);
+		console.log('countriesAll', countriesAll);
 
 		$dataReady = true;
 	}
@@ -116,31 +122,15 @@
 		await mergeData();
 	});
 
-	// function getFill(feature) {
-	// 	return colorScale(feature.value);
-	// }
-
 	function getFill(feature) {
 		if (feature.value) {
 			return colorScale(feature.value);
 		} else {
-			return '#F4F4F4';
-		}
-	}
-
-	function getFillEu(feature) {
-		if (feature.value) {
-			return colorScale(feature.value);
-		} else {
-			return '#CAD1D9';
-		}
-	}
-
-	function getFillTest(feature) {
-		if (feature.properties.isEuranetMember) {
-			return '#51A665';
-		} else {
-			return '#CAD1D9';
+			if (feature.properties.isEuMember) {
+				return '#CAD1D9';
+			} else {
+				return '#F4F4F4';
+			}
 		}
 	}
 
@@ -153,27 +143,28 @@
 	}
 
 	function handleMouseMove(e) {
-		var divOffset = offset(e.currentTarget);
+		let divOffset = offset(e.currentTarget);
+
 		let mouseX = e.pageX - divOffset.left;
 		let mouseY = e.pageY - divOffset.top;
-		// console.log(mouseX, mouseY);
+		// console.log(mouseX);
 
 		if (hoveredCountry) {
+			// console.log(hoveredCountry);
 			MOUSE.set({
 				x: mouseX,
 				y: mouseY,
 				tooltip: {
 					name: hoveredCountry.name,
-					value: hoveredCountry.value
+					value: hoveredCountry.value,
+					valuePercent: hoveredCountry.valuePercent
 				}
 			});
 		}
 
-		// console.log($MOUSE);
-
 		// Calculate the position of the map div in the page to get mouse position
 		function offset(el) {
-			var rect = el.getBoundingClientRect(),
+			let rect = el.getBoundingClientRect(),
 				scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
 				scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 			return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
@@ -182,8 +173,13 @@
 
 	$: handleMouseEnter = function (country) {
 		if (tooltipAvailable) {
+			let countryName = countryNames.filter((c) => {
+				return c.id == country.properties.id;
+			})[0].na;
+
+			// console.log(countryName);
 			hoveredCountry = {
-				name: country.properties.na,
+				name: countryName,
 				value: country.value
 			};
 
@@ -201,29 +197,22 @@
 </script>
 
 {#if $dataReady}
-	<div id="map" on:mousemove={handleMouseMove}>
-		<svg preserveAspectRatio="xMidYMid meet" viewbox="0 0 {width} {height}">
+	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
+		<!-- <Scale classes={schemeBlues[5]} {clusters} />
+		<Legend {legend} /> -->
+
+		<svg preserveAspectRatio="xMinYMid meet" class="" viewbox="0 0 {width} {height}">
 			<!-- graticules (lines) -->
 			{#each graticules.features as feature, index}
 				<path d={path(feature)} stroke="#cfcfcf" fill="transparent" class="noPointer" />
 			{/each}
 
-			<!-- bgCountries -->
-			{#each bgCountries.features as feature, index}
+			<!-- countriesAll -->
+			{#each countriesAll.features as feature, index}
 				<path
 					d={path(feature)}
-					stroke="#CDCDCD"
+					stroke="white"
 					fill={getFill(feature)}
-					class={getClass(feature)}
-				/>
-			{/each}
-
-			<!-- EU countries -->
-			{#each euCountries.features as feature, index}
-				<path
-					d={path(feature)}
-					stroke="#A3A3A3"
-					fill={getFillEu(feature)}
 					class={getClass(feature)}
 					on:mouseenter={() => handleMouseEnter(feature)}
 					on:mouseleave={() => handleMouseLeave(feature)}
@@ -232,23 +221,30 @@
 		</svg>
 
 		<div
-			class="tooltip {tooltipVisible ? 'active' : ''}"
-			style="top: {$MOUSE.y - tooltipHeight}px; left:{$MOUSE.x}px;"
+			class="tooltip text-sm p-3 {tooltipVisible ? 'active' : ''}"
+			style="top: {$MOUSE.y - tooltipHeight}px; left:{tooltipPositionX}px;"
 			bind:clientHeight={tooltipHeight}
+			bind:clientWidth={tooltipWidth}
 		>
-			<div class="tooltip-head">{$MOUSE.tooltip.name}</div>
-			<div class="tooltip-body">{formatPercent($MOUSE.tooltip.value)}</div>
+			<div class="tooltip-head font-bold">{$MOUSE.tooltip.name}</div>
+			<div class="tooltip-body space-y-1">
+				<div class="absolute-values">
+					<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}</span>
+					<span>{tooltip.label1}</span>
+				</div>
+			</div>
 		</div>
 	</div>
 {/if}
 
 <style>
 	#map {
-		/* background-color: #f1f5f9; */
+		position: relative;
 	}
 
 	svg {
-		/* background: blue; */
+		width: 100%;
+		height: auto;
 	}
 
 	svg path {
@@ -261,21 +257,28 @@
 		pointer-events: none;
 	}
 
+	.pointer {
+		pointer-events: all;
+	}
+
 	.tooltip {
 		text-align: left;
 		position: absolute;
 		pointer-events: none;
 		display: none;
 		background: white;
-		padding: 1rem;
 		border-radius: 3px;
 		z-index: 0;
 		box-shadow: 0 10px 20px 0 rgba(185, 185, 185, 0.25);
 	}
 
 	.tooltip-head {
-		font-weight: 600;
 		padding-bottom: 0.5rem;
+		border-bottom: 1px solid #e2e2e2;
+	}
+
+	.tooltip-body {
+		padding-top: 0.5rem;
 	}
 
 	.active {

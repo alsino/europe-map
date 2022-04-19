@@ -1,14 +1,14 @@
 {
-    "heading": "Mer än 4,9 miljoner flyktingar har redan flytt från Ukraina",
-    "subheading": "Denna karta uppdateras dagligen med de senaste uppgifterna från UNHCR om flyktingar som flyr från Ukraina till grannländerna sedan 24 februari 2022",
+    "heading": "Militärutgifterna ökar i alla EU-länder",
+    "subheading": "Offentliga utgifter för militärt försvar i procent av BNP i länder i Europeiska unionen 2020",
     "legend1": "Schengenländerna",
     "legend2": "Icke-Schengenländer",
-    "tooltip1": "flyktingar",
-    "tooltip2": "Andel av alla flyktingar",
-    "textUpdate": "Senast uppdaterad",
+    "tooltip1": "% av BNP",
+    "tooltip2": "",
     "textSourceDescription": "Källa",
-    "textSource": "FN:s högkommissarie för flyktingar (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Notera",
-    "textNote": "Rätten att röra sig fritt inom Schengenområdet innebär att det finns mycket få gränskontroller inom Europeiska unionen. Uppgifterna om ankomster till Schengenländer (Ungern, Polen, Slovakien) som gränsar till Ukraina representerar därför bara gränsövergångar till det landet, men UNHCR uppskattar att ett stort antal människor har flyttat vidare till andra länder.",
-    "textDataAccess": "Få åtkomst till data"
+    "textNote": "Offentliga utgifter efter COFOG (UNSD-klassificering av statliga funktioner, replikerad i ESA2010) funktion och typ.",
+    "textDataAccess": "Få åtkomst till data",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

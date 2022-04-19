@@ -1,14 +1,14 @@
 {
-    "heading": "Iš Ukrainos jau pabėgo daugiau nei 4,9 mln",
-    "subheading": "Šis žemėlapis kasdien atnaujinamas su naujausiais UNHCR duomenimis apie pabėgėlius, bėgančius iš Ukrainos į kaimynines šalis nuo 2022 m. vasario 24 d.",
+    "heading": "Karinės išlaidos visose ES šalyse",
+    "subheading": "Bendrosios valdžios išlaidos karinei gynybai procentais nuo BVP Europos Sąjungos šalyse 2020 m",
     "legend1": "Šengeno šalys",
     "legend2": "Ne Šengeno šalys",
-    "tooltip1": "pabėgėlių",
-    "tooltip2": "Dalis visų pabėgėlių",
-    "textUpdate": "Paskutinį kartą atnaujinta",
+    "tooltip1": "% BVP",
+    "tooltip2": "",
     "textSourceDescription": "Šaltinis",
-    "textSource": "Jungtinių Tautų vyriausiasis pabėgėlių komisaras (UNHCR)",
+    "textSource": "Eurostatas",
     "textNoteDescription": "Pastaba",
-    "textNote": "Teisė laisvai judėti Šengeno erdvėje reiškia, kad Europos Sąjungoje yra labai mažai sienų kontrolės. Todėl duomenys apie atvykimus į Šengeno šalis (Vengriją, Lenkiją, Slovakiją), besiribojančias su Ukraina, atspindi tik sienos kirtimus į šią šalį, tačiau UNHCR apskaičiavo, kad daug žmonių persikėlė į kitas šalis.",
-    "textDataAccess": "Pasiekite duomenis"
+    "textNote": "Valdžios išlaidos pagal COFOG (UNSD vyriausybės funkcijų klasifikatorius, pakartotas ESS2010) funkciją ir tipą.",
+    "textDataAccess": "Pasiekite duomenis",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

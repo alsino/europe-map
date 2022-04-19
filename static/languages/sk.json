@@ -1,14 +1,14 @@
 {
-    "heading": "Z Ukrajiny už utieklo viac ako 4,9 milióna utečencov",
-    "subheading": "Táto mapa je denne aktualizovaná o najnovšie údaje UNHCR o utečencoch utekajúcich z Ukrajiny do susedných krajín od 24. februára 2022",
+    "heading": "Vojenské výdavky sa zvýšili vo všetkých krajinách EÚ",
+    "subheading": "Výdavky verejnej správy na vojenskú obranu ako percento HDP v krajinách Európskej únie v roku 2020",
     "legend1": "krajiny schengenského priestoru",
     "legend2": "Krajiny mimo Schengenu",
-    "tooltip1": "utečencov",
-    "tooltip2": "Podiel všetkých utečencov",
-    "textUpdate": "Naposledy aktualizovaný",
+    "tooltip1": "% HDP",
+    "tooltip2": "",
     "textSourceDescription": "Zdroj",
-    "textSource": "Vysoký komisár OSN pre utečencov (UNHCR)",
+    "textSource": "Eurostat",
     "textNoteDescription": "Poznámka",
-    "textNote": "Právo na voľný pohyb v rámci schengenského priestoru znamená, že v rámci Európskej únie je len veľmi málo hraničných kontrol. Údaje o príchodoch do krajín schengenského priestoru (Maďarsko, Poľsko, Slovensko) hraničiacich s Ukrajinou teda predstavujú len hraničné prechody do tejto krajiny, no UNHCR odhaduje, že veľký počet ľudí sa presťahoval do iných krajín.",
-    "textDataAccess": "Prístup k údajom"
+    "textNote": "Vládne výdavky podľa funkcie a typu COFOG (klasifikácia funkcií verejnej správy OSN, replikovaná v ESA2010).",
+    "textDataAccess": "Prístup k údajom",
+    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=sk"
 }
