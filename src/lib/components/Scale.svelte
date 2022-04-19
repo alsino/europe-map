@@ -5,6 +5,10 @@
 
 	export let classes;
 	export let clusters;
+
+	export let scaleMin;
+	export let scaleMax;
+
 	clusters.unshift(0);
 	console.log(clusters);
 
@@ -30,7 +34,7 @@
 	<div class="flex justify-center">
 		{#each clusters as number, index}
 			<div class="swatch text-xs {index == 0 ? 'text-left' : 'text-right'}">
-				{displayDigit(index, number)}
+				{displayDigit(index, index == 0 ? scaleMin : scaleMax)}
 			</div>
 		{/each}
 	</div>

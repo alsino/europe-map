@@ -14,6 +14,7 @@
 
 	import { csv } from 'd3-fetch';
 	import { extent } from 'd3-array';
+	import { min, max } from 'd3-array';
 
 	import { scaleQuantile, scaleSequential, scaleSequentialQuantile } from 'd3-scale';
 	import { schemeBlues } from 'd3-scale-chromatic';
@@ -25,6 +26,8 @@
 	let height = 600;
 	let paddingMap;
 	let center;
+
+	let scaleMin, scaleMax;
 
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
 
@@ -91,6 +94,8 @@
 				// Set color scale domain and range
 				colorScale.domain(extent(extentArray)).range(schemeBlues[5]);
 				clusters = colorScale.quantiles();
+				scaleMin = min(extentArray);
+				scaleMax = max(extentArray);
 			})
 			.catch((error) => console.error('error', error));
 	}
@@ -199,7 +204,7 @@
 
 {#if $dataReady}
 	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
-		<Scale classes={schemeBlues[5]} {clusters} />
+		<Scale classes={schemeBlues[5]} {clusters} {scaleMin} {scaleMax} />
 		<Legend {legend} />
 
 		<svg preserveAspectRatio="xMinYMid meet" class="" viewbox="0 0 {width} {height}">
