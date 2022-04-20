@@ -1,7 +1,5 @@
 # ToDos
 
-- CSV map correct scale values
-
 --
 
 Nice to have:
