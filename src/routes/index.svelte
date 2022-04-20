@@ -9,10 +9,10 @@
 
 	let heading;
 	let subheading;
+	let legend;
+	let legendEntries;
 	let tooltipLabel1;
 	let tooltipLabel2;
-	let legendLabel1;
-	let legendLabel2;
 	let textSourceDescription;
 	let textSource;
 	let textDataAccess;
@@ -41,8 +41,6 @@
 			.then(function (data) {
 				heading = data.heading;
 				subheading = data.subheading;
-				legendLabel1 = data.legend1;
-				legendLabel2 = data.legend2;
 				tooltipLabel1 = data.tooltip1;
 				tooltipLabel2 = data.tooltip2;
 				textSourceDescription = data.textSourceDescription;
@@ -51,10 +49,24 @@
 				linkDataAccess = data.linkDataAccess;
 				textNoteDescription = data.textNoteDescription;
 				textNote = data.textNote;
+
+				// Filter all keys with text "legend"
+				legendEntries = Object.keys(data).filter((item) => {
+					return item.includes('legend');
+				});
+
+				// For each "legend" entry create object with value and color
+				legend = legendEntries.map((item) => {
+					return {
+						[item]: data[item],
+						label: data[item],
+						color: config[`${item}Color`]
+					};
+				});
+				// console.log(legend);
 			});
 	}
 
-	$: legend = [{ label: legendLabel1, color: '#f4f4f4' }];
 	$: tooltip = { label1: tooltipLabel1, label2: tooltipLabel2 };
 
 	function handleSelect(event) {

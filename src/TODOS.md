@@ -1,5 +1,9 @@
 # ToDos
 
+- Make colorscheme parametric (green or blue)
+- Make legend parametric (number of entries)
+- Dataset for single color (green)
+
 --
 
 Nice to have:

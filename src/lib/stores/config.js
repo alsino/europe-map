@@ -8,7 +8,12 @@ export const config = {
   "legendAvailable": true,
   "textSourceAvailable": true,
   "textNoteAvailable": true,
-  "textDataAccessAvailable": true
+  "textDataAccessAvailable": true,
+  "legend1Color": "#cad1d9",
+  "legend2Color": "red",
+  "legend3Color": "blue",
+  "legend4Color": "green"
+  // "colorScheme": "multiple" // multiple or single
 }
 
 export const APP_HEIGHT = writable(undefined);
