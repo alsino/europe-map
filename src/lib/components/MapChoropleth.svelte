@@ -11,9 +11,6 @@
 	import { selectedLanguage } from '$lib/stores/shared';
 	import { countryNameTranslations } from '$lib/stores/countries';
 
-	import Scale from './Scale.svelte';
-	import Legend from './Legend.svelte';
-
 	import { csv } from 'd3-fetch';
 	import { extent } from 'd3-array';
 	import { min, max } from 'd3-array';
@@ -22,6 +19,9 @@
 	import { schemeBlues } from 'd3-scale-chromatic';
 
 	import { formatInt } from '$lib/utils/formatNumbers';
+
+	import Scale from './Scale.svelte';
+	import Legend from './Legend.svelte';
 
 	// Make square dimensions i.e. 600x600 to fill all space
 	let width = 600;
@@ -34,6 +34,8 @@
 
 	export let legend;
 	export let tooltip;
+
+	console.log(tooltip);
 
 	$: if ($CENTER_ON === 'europe') {
 		paddingMap = -60;
@@ -235,10 +237,12 @@
 		>
 			<div class="tooltip-head font-bold">{$MOUSE.tooltip.name}</div>
 			<div class="tooltip-body space-y-1">
-				<div class="absolute-values">
-					<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}</span>
-					<span>{tooltip.label1}</span>
-				</div>
+				{#each tooltip as tip}
+					<div class="values">
+						<span class="font-bold">{formatInt($MOUSE.tooltip.value * 100)}</span>
+						<span>{tip.label}</span>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>

@@ -11,16 +11,14 @@
 	let subheading;
 	let legend;
 	let legendEntries;
-	let tooltipLabel1;
-	let tooltipLabel2;
+	let tooltip;
+	let tooltipEntries;
 	let textSourceDescription;
 	let textSource;
 	let textDataAccess;
 	let linkDataAccess;
 	let textNoteDescription;
 	let textNote;
-
-	$: console.log(config);
 
 	// Send map height to parent window
 	$: {
@@ -41,8 +39,6 @@
 			.then(function (data) {
 				heading = data.heading;
 				subheading = data.subheading;
-				tooltipLabel1 = data.tooltip1;
-				tooltipLabel2 = data.tooltip2;
 				textSourceDescription = data.textSourceDescription;
 				textSource = data.textSource;
 				textDataAccess = data.textDataAccess;
@@ -50,7 +46,7 @@
 				textNoteDescription = data.textNoteDescription;
 				textNote = data.textNote;
 
-				// Filter all keys with text "legend"
+				// LEGEND // Filter all keys with text "legend"
 				legendEntries = Object.keys(data).filter((item) => {
 					return item.includes('legend');
 				});
@@ -63,11 +59,22 @@
 						color: config[`${item}Color`]
 					};
 				});
-				// console.log(legend);
+
+				// TOOLTIP // Filter all keys with text "tooltip"
+				tooltipEntries = Object.keys(data).filter((item) => {
+					return item.includes('tooltip');
+				});
+
+				// For each "tooltip" entry create object with value and color
+				tooltip = tooltipEntries.map((item) => {
+					return {
+						[item]: data[item],
+						label: data[item]
+					};
+				});
+				// console.log(tooltip);
 			});
 	}
-
-	$: tooltip = { label1: tooltipLabel1, label2: tooltipLabel2 };
 
 	function handleSelect(event) {
 		$selectedLanguage = { value: event.detail.value, label: event.detail.label };
@@ -101,7 +108,9 @@
 			{#if config.subheadlineAvailable && subheading}<h3 class="text-md">{subheading}</h3>{/if}
 		</div>
 		<div id="chart-body" class="mt-4">
-			<MapChoropleth {legend} {tooltip} />
+			{#if legend && tooltip}
+				<MapChoropleth {legend} {tooltip} />
+			{/if}
 		</div>
 	</div>
 	<div class="text-xs mt-2">

@@ -1,12 +1,12 @@
 export const config = {
-  "headlineAvailable": true,
-  "subheadlineAvailable": true,
-  "tooltipAvailable": true,
-  "scaleBarAvailable": true,
-  "legendAvailable": true,
-  "textSourceAvailable": true,
-  "textNoteAvailable": true,
-  "textDataAccessAvailable": true,
+  "headlineAvailable": true, // true or false
+  "subheadlineAvailable": true, // true or false
+  "tooltipAvailable": true, // true or false
+  "scaleBarAvailable": true, // true or false
+  "legendAvailable": true, // true or false
+  "textSourceAvailable": true, // true or false
+  "textNoteAvailable": true, // true or false
+  "textDataAccessAvailable": true, // true or false
   "legend1Color": "#cad1d9",
   "legend2Color": "red",
   "legend3Color": "blue",

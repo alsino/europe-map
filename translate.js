@@ -10,7 +10,9 @@ console.log(chalk.green('Starting translation process...'));
 
 // Import data
 const require = createRequire(import.meta.url);
-const sourceJSON = require("./static/languages/en.json");
+// const sourceJSON = require("./static/languages/en.json");
+const sourceJSON = require("./src/lib/stores/config-text.json");
+
 const languages = require("./static/languages/languages.json");
 
 // Imports the Google Cloud client library
