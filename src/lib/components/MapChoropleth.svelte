@@ -1,14 +1,16 @@
 <script>
-	import { MOUSE } from '$lib/stores/shared';
+	import { config } from '$lib/stores/config';
+	import { MOUSE } from '$lib/stores/config';
 	import { onMount } from 'svelte';
-	import { CENTER_ON } from '$lib/stores/shared';
-	import { csvData } from '$lib/stores/shared';
+	import { CENTER_ON } from '$lib/stores/config';
+	import { csvData } from '$lib/stores/config';
 	import { feature } from 'topojson-client';
 	import { geoPath, geoIdentity } from 'd3-geo';
-	import { dataReady } from '$lib/stores/shared';
-	import { MAP_WIDTH } from '$lib/stores/shared';
-	import { selectedLanguage } from '$lib/stores/shared';
+	import { dataReady } from '$lib/stores/config';
+	import { MAP_WIDTH } from '$lib/stores/config';
+	import { selectedLanguage } from '$lib/stores/config';
 	import { countryNameTranslations } from '$lib/stores/countries';
+
 	import Scale from './Scale.svelte';
 	import Legend from './Legend.svelte';
 
@@ -26,7 +28,6 @@
 	let height = 600;
 	let paddingMap;
 	let center;
-
 	let scaleMin, scaleMax;
 
 	$: countryNames = countryNameTranslations[$selectedLanguage.value];
@@ -34,17 +35,13 @@
 	export let legend;
 	export let tooltip;
 
-	$: if ($CENTER_ON === 'ukraine') {
-		paddingMap = 150;
-		center = ukraine;
-	} else if ($CENTER_ON === 'europe') {
+	$: if ($CENTER_ON === 'europe') {
 		paddingMap = -60;
 		center = countriesAll;
 	}
 
 	$: tooltipPositionX = $MOUSE.x < $MAP_WIDTH / 2 ? $MOUSE.x : $MOUSE.x - tooltipWidth;
 
-	let tooltipAvailable = true; // Set this to switch on/ff global tooltip
 	let tooltipVisible = false;
 	let tooltipHeight;
 	let tooltipWidth;
@@ -79,7 +76,7 @@
 	}
 
 	async function fetchCSV() {
-		const res = await csv('/data/thematic/data-1.csv')
+		const res = await csv('/data/thematic/data-2.csv')
 			.then(function (data) {
 				// Parse numbers as integers
 				data.forEach(function (d) {
@@ -178,7 +175,7 @@
 	}
 
 	$: handleMouseEnter = function (country) {
-		if (tooltipAvailable) {
+		if (config.tooltipAvailable) {
 			let countryName = countryNames.filter((c) => {
 				return c.id == country.properties.id;
 			})[0].na;
@@ -196,7 +193,7 @@
 	};
 
 	$: handleMouseLeave = function (country) {
-		if (tooltipAvailable) {
+		if (config.tooltipAvailable) {
 			tooltipVisible = false;
 		}
 	};
@@ -204,8 +201,12 @@
 
 {#if $dataReady}
 	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
-		<Scale classes={schemeBlues[5]} {clusters} {scaleMin} {scaleMax} />
-		<Legend {legend} />
+		{#if config.scaleBarAvailable}
+			<Scale classes={schemeBlues[5]} {clusters} {scaleMin} {scaleMax} />
+		{/if}
+		{#if config.legendAvailable}
+			<Legend {legend} />
+		{/if}
 
 		<svg preserveAspectRatio="xMinYMid meet" class="" viewbox="0 0 {width} {height}">
 			<!-- graticules (lines) -->

@@ -1,7 +1,8 @@
 <script>
+	import { config } from '$lib/stores/config';
 	import { onMount } from 'svelte';
-	import { APP_HEIGHT } from '$lib/stores/shared';
-	import { selectedLanguage } from '$lib/stores/shared';
+	import { APP_HEIGHT } from '$lib/stores/config';
+	import { selectedLanguage } from '$lib/stores/config';
 	import { languageNameTranslations } from '$lib/stores/languages';
 	import MapChoropleth from '$lib/components/MapChoropleth.svelte';
 	import Select from 'svelte-select';
@@ -18,6 +19,8 @@
 	let linkDataAccess;
 	let textNoteDescription;
 	let textNote;
+
+	$: console.log(config);
 
 	// Send map height to parent window
 	$: {
@@ -81,31 +84,31 @@
 		</div>
 	</header>
 	<div id="chart" class="mt-8">
-		{#if heading && subheading}
-			<div id="chart-header">
-				<h1 class="text-xl font-bold">{heading}</h1>
-				<h3 class="text-md">{subheading}</h3>
-			</div>
-		{/if}
-
+		<div id="chart-header">
+			{#if config.headlineAvailable && heading}<h1 class="text-xl font-bold">{heading}</h1>{/if}
+			{#if config.subheadlineAvailable && subheading}<h3 class="text-md">{subheading}</h3>{/if}
+		</div>
 		<div id="chart-body" class="mt-4">
 			<MapChoropleth {legend} {tooltip} />
 		</div>
 	</div>
-	{#if textSourceDescription && textSource && textDataAccess}
-		<div class="text-xs mt-2">
+	<div class="text-xs mt-2">
+		{#if config.textSourceAvailable && textSourceDescription && textSource}
 			<div>
-				<span class="font-bold">{textSourceDescription}:</span>
-				{textSource}
+				<span class="font-bold">{textSourceDescription}: </span><span>{textSource}</span>
 			</div>
+		{/if}
+		{#if config.textNoteAvailable && textNoteDescription && textNote}
 			<div>
 				<span class="font-bold">{textNoteDescription}: </span><span>{textNote}</span>
 			</div>
+		{/if}
+		{#if config.textDataAccessAvailable && linkDataAccess && textDataAccess}
 			<div class="underline">
 				<a target="_blank" href={linkDataAccess}>{textDataAccess}</a>
 			</div>
-		</div>
-	{/if}
+		{/if}
+	</div>
 </div>
 
 <style>
