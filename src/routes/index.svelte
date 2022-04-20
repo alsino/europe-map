@@ -1,8 +1,8 @@
 <script>
-	import { config } from '$lib/stores/config';
+	import { config } from '$lib/stores/config-features';
 	import { onMount } from 'svelte';
-	import { APP_HEIGHT } from '$lib/stores/config';
-	import { selectedLanguage } from '$lib/stores/config';
+	import { APP_HEIGHT } from '$lib/stores/shared';
+	import { selectedLanguage } from '$lib/stores/shared';
 	import { languageNameTranslations } from '$lib/stores/languages';
 	import MapChoropleth from '$lib/components/MapChoropleth.svelte';
 	import Select from 'svelte-select';

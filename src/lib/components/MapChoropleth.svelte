@@ -1,14 +1,14 @@
 <script>
-	import { config } from '$lib/stores/config';
-	import { MOUSE } from '$lib/stores/config';
+	import { config } from '$lib/stores/config-features';
+	import { MOUSE } from '$lib/stores/shared';
 	import { onMount } from 'svelte';
-	import { CENTER_ON } from '$lib/stores/config';
-	import { csvData } from '$lib/stores/config';
+	import { CENTER_ON } from '$lib/stores/shared';
+	import { csvData } from '$lib/stores/shared';
 	import { feature } from 'topojson-client';
 	import { geoPath, geoIdentity } from 'd3-geo';
-	import { dataReady } from '$lib/stores/config';
-	import { MAP_WIDTH } from '$lib/stores/config';
-	import { selectedLanguage } from '$lib/stores/config';
+	import { dataReady } from '$lib/stores/shared';
+	import { MAP_WIDTH } from '$lib/stores/shared';
+	import { selectedLanguage } from '$lib/stores/shared';
 	import { countryNameTranslations } from '$lib/stores/countries';
 
 	import Scale from './Scale.svelte';
