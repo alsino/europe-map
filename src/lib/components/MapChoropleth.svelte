@@ -96,11 +96,13 @@
 				});
 				csvData.set(data);
 
-				// Set color scale domain and range
-				colorScale.domain(extent(extentArray)).range(schemeBlues[5]);
-				clusters = colorScale.quantiles();
-				scaleMin = min(extentArray);
-				scaleMax = max(extentArray);
+				// Set color scale domain and range, only when values
+				if (config.datasetType == 'values') {
+					colorScale.domain(extent(extentArray)).range(schemeBlues[5]);
+					clusters = colorScale.quantiles();
+					scaleMin = min(extentArray);
+					scaleMax = max(extentArray);
+				}
 			})
 			.catch((error) => console.error('error', error));
 	}
