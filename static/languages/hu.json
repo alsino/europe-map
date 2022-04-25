@@ -1,12 +1,12 @@
 {
-    "heading": "Emelkednek a katonai kiadások az EU összes tagállamában",
-    "subheading": "Az államháztartás katonai védelemre fordított kiadásai a GDP százalékában az Európai Unió országaiban 2020-ban",
+    "heading": "Az Euranet Plus kiterjesztette taglétszámát",
+    "subheading": "Az Euranet Plus 15 vezető köz- és magánműsorszolgáltatóból áll az EU-ban, és több mint 13,8 millió hallgatót ér el összesített napi eléréssel.",
     "legend1": "EU-n kívüli országok",
     "tooltip1": "a GDP %-a",
     "textSourceDescription": "Forrás",
     "textSource": "Eurostat",
     "textNoteDescription": "jegyzet",
-    "textNote": "Kormányzati kiadások COFOG (UNSD Classification of Government Functions, replikálva az ESA2010-ben) funkció és típus szerint.",
+    "textNote": "Az EU 15 hivatalos nyelvén előállító és sugárzó Euranet Plus az Európai Unió 15 országában működő nemzetközi, nemzeti és regionális rádióállomásain keresztül az EU-val kapcsolatos tartalmakat biztosít.",
     "textDataAccess": "Hozzáférés az adatokhoz",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

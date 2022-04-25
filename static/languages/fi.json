@@ -1,12 +1,12 @@
 {
-    "heading": "Sotilasmenot kasvavat kaikissa EU-maissa",
-    "subheading": "Julkiset menot sotilaalliseen puolustukseen suhteessa BKT:hen Euroopan unionin maissa vuonna 2020",
+    "heading": "Euranet Plus on laajentanut jäsenkuntaansa",
+    "subheading": "Euranet Plus koostuu 15 johtavasta julkisesta ja yksityisestä lähetystoiminnan harjoittajasta EU:ssa ja tavoittaa yli 13,8 miljoonaa kuuntelijaa kumulatiivisella päivittäisellä kattauksella",
     "legend1": "EU:n ulkopuoliset maat",
     "tooltip1": "% BKT:sta",
     "textSourceDescription": "Lähde",
     "textSource": "Eurostat",
     "textNoteDescription": "Huomautus",
-    "textNote": "Julkiset menot COFOG:n (UNSD:n julkishallinnon toimintojen luokittelu, jäljennetty EKT2010:ssä) toiminnon ja tyypin mukaan.",
+    "textNote": "Euranet Plus tuottaa ja lähettää EU:n 15 virallisella kielellä ja tarjoaa EU:hun liittyvää sisältöä kansainvälisten, kansallisten ja alueellisten radioasemien kautta 15 Euroopan unionin maassa.",
     "textDataAccess": "Käytä tietoja",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=fi"
 }

@@ -1,12 +1,12 @@
 {
-    "heading": "Caiteachas míleata suas ar fud gach stát AE",
-    "subheading": "Caiteachas an rialtais ghinearálta ar chosaint mhíleata mar chéatadán den OTI i dtíortha an Aontais Eorpaigh in 2020",
+    "heading": "Tá leathnú déanta ag Euranet Plus ar a líon ball",
+    "subheading": "Tá Euranet Plus comhdhéanta de 15 craoltóir poiblí agus príobháideacha is mó le rá san AE, a shroicheann níos mó ná 13,8 milliún éisteoir i raon laethúil carnach",
     "legend1": "Tíortha neamh-AE",
     "tooltip1": "% de OTI",
     "textSourceDescription": "Foinse",
     "textSource": "Eurostat",
     "textNoteDescription": "Nóta",
-    "textNote": "Caiteachas rialtais de réir feidhme agus cineál COFOG (aicmiú UNSD ar fheidhmeanna an rialtais, arna mhacasamhlú in CCE2010).",
+    "textNote": "Agus é ag táirgeadh agus ag craoladh i 15 theanga oifigiúla an AE, soláthraíonn Euranet Plus ábhar a bhaineann leis an AE trína stáisiúin raidió idirnáisiúnta, náisiúnta agus réigiúnacha i 15 thír den Aontas Eorpach.",
     "textDataAccess": "Faigh rochtain ar na sonraí",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=ga"
 }

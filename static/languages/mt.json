@@ -1,12 +1,12 @@
 {
-    "heading": "Infieq militari fl-istati kollha tal-UE",
-    "subheading": "In-nefqa ġenerali tal-gvern fuq id-difiża militari bħala perċentwal tal-PGD fil-pajjiżi tal-Unjoni Ewropea fl-2020",
+    "heading": "Euranet Plus estendiet il-bażi tal-membri tagħha",
+    "subheading": "Euranet Plus huwa magħmul minn 15-il xandar pubbliku u privat ewlieni fl-UE, li jilħaq aktar minn 13,8 miljun semmiegħ f'livell kumulattiv ta' kuljum.",
     "legend1": "Pajjiżi mhux tal-UE",
     "tooltip1": "% tal-PGD",
     "textSourceDescription": "Sors",
     "textSource": "Eurostat",
     "textNoteDescription": "Nota",
-    "textNote": "Nefqa tal-gvern skont il-funzjoni u t-tip tal-COFOG (klassifikazzjoni UNSD tal-funzjonijiet tal-gvern, replikata fl-ESA2010).",
+    "textNote": "Jipproduċi u jxandar fi 15-il lingwa uffiċjali tal-UE, Euranet Plus jipprovdi kontenut relatat mal-UE permezz tal-istazzjonijiet tar-radju internazzjonali, nazzjonali u reġjonali tiegħu fi 15-il pajjiż tal-Unjoni Ewropea.",
     "textDataAccess": "Aċċessa għad-data",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

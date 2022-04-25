@@ -1,12 +1,12 @@
 {
-    "heading": "Military spending up across all EU states",
-    "subheading": "General government expenditure on military defense as a percentage of GDP in countries of the European Union in 2020",
+    "heading": "Euranet Plus has extended its member base",
+    "subheading": "Euranet Plus is composed of 15 leading public and private broadcasters in the EU, reaching more than 13,8 million listeners in cumulative daily reach",
     "legend1": "Non-EU countries",
     "tooltip1": "% of GDP",
     "textSourceDescription": "Source",
     "textSource": "Eurostat",
     "textNoteDescription": "Note",
-    "textNote": "Government expenditure by COFOG (UNSD classification of functions of government, replicated in ESA2010) function and type.",
+    "textNote": "Producing and broadcasting in 15 official EU languages, Euranet Plus provides EU-related content through its international, national and regional radio stations in 15 countries of the European Union..",
     "textDataAccess": "Access the data",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

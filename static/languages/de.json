@@ -1,12 +1,12 @@
 {
-    "heading": "Militärausgaben in allen EU-Staaten gestiegen",
-    "subheading": "Staatliche Verteidigungsausgaben in Prozent des BIP in den Ländern der Europäischen Union im Jahr 2020",
+    "heading": "Euranet Plus hat seine Mitgliederbasis erweitert",
+    "subheading": "Euranet Plus besteht aus 15 führenden öffentlich-rechtlichen und privaten Sendern in der EU und erreicht täglich mehr als 13,8 Millionen Zuhörer",
     "legend1": "Nicht-EU-Länder",
     "tooltip1": "% des BIP",
     "textSourceDescription": "Quelle",
     "textSource": "Eurostat",
     "textNoteDescription": "Notiz",
-    "textNote": "Staatsausgaben nach Funktion und Art der COFOG (UNSD-Klassifikation der Staatsfunktionen, repliziert im ESVG 2010).",
+    "textNote": "Euranet Plus produziert und sendet in 15 offiziellen EU-Sprachen und bietet EU-bezogene Inhalte über seine internationalen, nationalen und regionalen Radiosender in 15 Ländern der Europäischen Union.",
     "textDataAccess": "Greifen Sie auf die Daten zu",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

@@ -64,7 +64,7 @@
 	}
 
 	$: if ($dataReady) {
-		console.log('Country data for map loaded');
+		// console.log('Country data for map loaded');
 		projection.fitExtent(
 			[
 				[paddingMap, paddingMap],
@@ -84,7 +84,7 @@
 	}
 
 	async function fetchCSV() {
-		const res = await csv('/data/thematic/data-1.csv')
+		const res = await csv('/data/thematic/data-3-binary.csv')
 			.then(function (data) {
 				// Parse numbers as integers
 				data.forEach(function (d) {
@@ -210,7 +210,9 @@
 {#if $dataReady}
 	<div id="map" class="relative" on:mousemove={handleMouseMove} bind:clientHeight={$MAP_WIDTH}>
 		{#if config.scaleBarAvailable}
-			<Scale classes={schemeBlues[5]} {clusters} {scaleMin} {scaleMax} />
+			{#if config.datasetType == 'values'}
+				<Scale classes={schemeBlues[5]} {clusters} {scaleMin} {scaleMax} />
+			{/if}
 		{/if}
 		{#if config.legendAvailable}
 			<Legend {legend} />

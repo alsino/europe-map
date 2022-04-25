@@ -1,12 +1,12 @@
 {
-    "heading": "Wzrost wydatków wojskowych we wszystkich państwach UE",
-    "subheading": "Wydatki sektora instytucji rządowych i samorządowych na obronę wojskową jako procent PKB w krajach Unii Europejskiej w 2020 roku",
+    "heading": "Euranet Plus poszerzył swoją bazę członków",
+    "subheading": "Euranet Plus składa się z 15 wiodących nadawców publicznych i prywatnych w UE, docierając do ponad 13,8 mln słuchaczy w łącznym zasięgu dziennym",
     "legend1": "Kraje spoza UE",
     "tooltip1": "% PKB",
     "textSourceDescription": "Źródło",
     "textSource": "Eurostat",
     "textNoteDescription": "Notatka",
-    "textNote": "Wydatki rządowe według COFOG (klasyfikacja funkcji rządu według UNSD, powtórzona w ESA2010) funkcji i rodzaju.",
+    "textNote": "Produkując i nadając w 15 oficjalnych językach UE, Euranet Plus dostarcza treści związane z UE za pośrednictwem swoich międzynarodowych, krajowych i regionalnych stacji radiowych w 15 krajach Unii Europejskiej.",
     "textDataAccess": "Uzyskaj dostęp do danych",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

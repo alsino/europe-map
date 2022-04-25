@@ -1,12 +1,12 @@
 {
-    "heading": "Sõjalised kulutused suurenevad kõigis ELi riikides",
-    "subheading": "Valitsussektori kulutused sõjalisele kaitsele protsendina SKTst Euroopa Liidu riikides 2020. aastal",
+    "heading": "Euranet Plus on laiendanud oma liikmete arvu",
+    "subheading": "Euranet Plus koosneb 15 juhtivast avalik-õiguslikust ja eraringhäälinguorganisatsioonist ELis, jõudes igapäevaselt enam kui 13,8 miljoni kuulajani.",
     "legend1": "ELi mittekuuluvad riigid",
     "tooltip1": "% SKTst",
     "textSourceDescription": "Allikas",
     "textSource": "Eurostat",
     "textNoteDescription": "Märge",
-    "textNote": "Valitsemissektori kulud COFOG-i (UNSD klassifikatsioon valitsusfunktsioonide klassifikatsioonist, korratud ESA2010-s) funktsiooni ja tüübi järgi.",
+    "textNote": "Euranet Plus, mis toodab ja edastab 15 ELi ametlikus keeles, pakub ELiga seotud sisu oma rahvusvaheliste, riiklike ja piirkondlike raadiojaamade kaudu 15 Euroopa Liidu riigis.",
     "textDataAccess": "Juurdepääs andmetele",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

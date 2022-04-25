@@ -1,12 +1,12 @@
 {
-    "heading": "Militärutgifterna ökar i alla EU-stater",
-    "subheading": "Offentliga utgifter för militärt försvar i procent av BNP i länder i Europeiska unionen 2020",
+    "heading": "Euranet Plus har utökat sin medlemsbas",
+    "subheading": "Euranet Plus består av 15 ledande offentliga och privata programföretag i EU och når mer än 13,8 miljoner lyssnare i kumulativ daglig räckvidd",
     "legend1": "Länder utanför EU",
     "tooltip1": "% av BNP",
     "textSourceDescription": "Källa",
     "textSource": "Eurostat",
     "textNoteDescription": "Notera",
-    "textNote": "Offentliga utgifter efter COFOG (UNSD-klassificering av statliga funktioner, replikerad i ESA2010) funktion och typ.",
+    "textNote": "Euranet Plus producerar och sänder på 15 officiella EU-språk och tillhandahåller EU-relaterat innehåll genom sina internationella, nationella och regionala radiostationer i 15 länder i Europeiska unionen.",
     "textDataAccess": "Få åtkomst till data",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

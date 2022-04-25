@@ -1,12 +1,12 @@
 {
-    "heading": "Vojenské výdavky sa zvýšili vo všetkých štátoch EÚ",
-    "subheading": "Výdavky verejnej správy na vojenskú obranu ako percento HDP v krajinách Európskej únie v roku 2020",
+    "heading": "Euranet Plus rozšíril svoju členskú základňu",
+    "subheading": "Euranet Plus sa skladá z 15 popredných verejnoprávnych a súkromných vysielateľov v EÚ, ktorí dosahujú viac ako 13,8 milióna poslucháčov v kumulatívnom dennom dosahu",
     "legend1": "Krajiny mimo EÚ",
     "tooltip1": "% HDP",
     "textSourceDescription": "Zdroj",
     "textSource": "Eurostat",
     "textNoteDescription": "Poznámka",
-    "textNote": "Vládne výdavky podľa funkcie a typu COFOG (klasifikácia funkcií verejnej správy OSN, replikovaná v ESA2010).",
+    "textNote": "Euranet Plus, ktorý produkuje a vysiela v 15 oficiálnych jazykoch EÚ, poskytuje obsah súvisiaci s EÚ prostredníctvom svojich medzinárodných, národných a regionálnych rozhlasových staníc v 15 krajinách Európskej únie.",
     "textDataAccess": "Prístup k údajom",
     "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=sk"
 }

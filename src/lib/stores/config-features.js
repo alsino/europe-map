@@ -1,11 +1,11 @@
 export const config = {
-  "datasetType": "values", // values or binary
+  "datasetType": "binary", // values or binary
   "headlineAvailable": true, // true or false
   "subheadlineAvailable": true, // true or false
-  "tooltipAvailable": true, // true or false
-  "scaleBarAvailable": true, // true or false
+  "tooltipAvailable": false, // true or false
+  "scaleBarAvailable": false, // true or false
   "legendAvailable": true, // true or false
-  "textSourceAvailable": true, // true or false
+  "textSourceAvailable": false, // true or false
   "textNoteAvailable": true, // true or false
   "textDataAccessAvailable": true, // true or false
   "legend1Color": "#cad1d9",
