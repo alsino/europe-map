@@ -1,4 +1,5 @@
 export const config = {
+  "datasetType": "values", // values or binary
   "headlineAvailable": true, // true or false
   "subheadlineAvailable": true, // true or false
   "tooltipAvailable": true, // true or false
@@ -11,5 +12,4 @@ export const config = {
   "legend2Color": "red",
   "legend3Color": "blue",
   "legend4Color": "green"
-  // "colorScheme": "multiple" // multiple or single
 }

@@ -35,8 +35,6 @@
 	export let legend;
 	export let tooltip;
 
-	console.log(tooltip);
-
 	$: if ($CENTER_ON === 'europe') {
 		paddingMap = -60;
 		center = countriesAll;
@@ -54,8 +52,16 @@
 
 	const projection = geoIdentity().reflectY(true);
 	const path = geoPath().projection(projection);
-	const colorScale = scaleQuantile();
+	let colorScale = scaleQuantile();
 	let clusters;
+
+	$: if (config.datasetType == 'values') {
+		colorScale = scaleQuantile();
+	} else if (config.datasetType == 'binary') {
+		colorScale = function (value) {
+			return value == 1 ? '#67A36B' : '';
+		};
+	}
 
 	$: if ($dataReady) {
 		console.log('Country data for map loaded');
@@ -78,7 +84,7 @@
 	}
 
 	async function fetchCSV() {
-		const res = await csv('/data/thematic/data-2.csv')
+		const res = await csv('/data/thematic/data-1.csv')
 			.then(function (data) {
 				// Parse numbers as integers
 				data.forEach(function (d) {
