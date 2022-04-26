@@ -1,12 +1,12 @@
 {
-    "heading": "Euranet Plus ampliou sua base de membros",
-    "subheading": "A Euranet Plus é composta por 15 emissoras públicas e privadas líderes na UE, atingindo mais de 13,8 milhões de ouvintes em alcance diário acumulado",
-    "legend1": "Países fora da UE",
-    "tooltip1": "% do PIB",
-    "textSourceDescription": "Fonte",
-    "textSource": "Eurostat",
-    "textNoteDescription": "Observação",
-    "textNote": "Produzindo e transmitindo em 15 idiomas oficiais da UE, o Euranet Plus fornece conteúdo relacionado à UE por meio de suas estações de rádio internacionais, nacionais e regionais em 15 países da União Europeia.",
-    "textDataAccess": "Acesse os dados",
-    "linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
+	"heading": "Euranet Plus ampliou sua base de membros",
+	"subheading": "A Euranet Plus é composta por 15 emissoras públicas e privadas líderes na UE, atingindo mais de 13,8 milhões de ouvintes em alcance diário acumulado",
+	"legend1": "Países fora da UE",
+	"tooltip1": "% do PIB",
+	"textSourceDescription": "Fonte",
+	"textSource": "Eurostat",
+	"textNoteDescription": "Observação",
+	"textNote": "Produzindo e transmitindo em 15 idiomas oficiais da UE, o Euranet Plus fornece conteúdo relacionado à UE por meio de suas estações de rádio internacionais, nacionais e regionais em 15 países da União Europeia.",
+	"textDataAccess": "Acesse os dados",
+	"linkDataAccess": "https://ec.europa.eu/eurostat/databrowser/view/tps00005/default/table?lang=en"
 }

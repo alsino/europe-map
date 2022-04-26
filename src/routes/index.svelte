@@ -27,7 +27,7 @@
 		}
 	}
 
-	$: dropdownLanguages = languageNameTranslations[$selectedLanguage.value];
+	$: dropdownLanguages = languageNameTranslations['en'];
 
 	onMount(async () => {
 		await getLanguage($selectedLanguage.value);
